@@ -21,13 +21,6 @@ def fileUpload():
         req_row = re.split(',', req)
         bonds.append(req_row)
 
-    dt = datetime.datetime.today()
-
-    this_month = dt.month
-    this_year = dt.year
-
-    lookup_date = str(this_month) + "/" + str(this_year)
-
     url = 'https://www.treasurydirect.gov/BC/SBCPrice'
 
     headers = {
@@ -56,10 +49,13 @@ def fileUpload():
     bond_price_totals = []
     bond_value_totals = []
 
-    for bond_amount, serial_number, issue_month, issue_year in bonds:
+    if len(bonds[0][0]) > 2:
+        bonds = bonds[1::]
+
+    for lookup_month, lookup_year, series, bond_amount, serial_number, issue_month, issue_year in bonds:
         results = []
 
-        data = "RedemptionDate=" + str(this_month) + "%2F" + str(this_year) + "&Series=EE&Denomination=" + bond_amount + "&SerialNumber=" + serial_number + "&IssueDate=" + issue_month + "%2F" + issue_year + \
+        data = "RedemptionDate=" + lookup_month + "%2F" + lookup_year + "&Series=" + series + "&Denomination=" + bond_amount + "&SerialNumber=" + serial_number + "&IssueDate=" + issue_month + "%2F" + issue_year + \
             "&btnAdd.x=CALCULATE&SerialNumList=&IssueDateList=&SeriesList=&DenominationList=&IssuePriceList=&InterestList=&YTDInterestList=&ValueList=&InterestRateList=&NextAccrualDateList=&MaturityDateList=&NoteList=&OldRedemptionDate=782&ViewPos=0&ViewType=Partial&Version=6"
 
         post = requests.post(url, headers=headers, data=data)
@@ -69,7 +65,7 @@ def fileUpload():
         row = response.xpath(
             '//table[@class="bnddata"]/tbody/tr[@class="altrow1"]/td//text()')[0:-1]
 
-        results.append(lookup_date)
+        results.append(lookup_month + '/' + lookup_year)
 
         for cell in row:
             results.append(cell)

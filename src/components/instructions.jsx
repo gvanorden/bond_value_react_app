@@ -29,7 +29,7 @@ class Instructions extends Component {
                         </li>
                     ))}
                 </ul>
-                <CSVLink data={exportData} style={{ float: 'left', width: '100%', textAlign: 'right' }}>[Download CSV Template]</CSVLink>
+                <CSVLink filename={'bond_wizard_template'} data={exportData} style={{ float: 'left', width: '100%', textAlign: 'right' }}>[Download CSV Template]</CSVLink>
                 <img src={excel} alt="spreadsheet example" style={{ height: '100%', width: '100%', margin: '.5em 0 1.5em 0' }}></img>
                 <li>Then, navigate to the <a href="/valuations" style={{ fontSize: '.95em', fontWeight: '500' }}>VALUATIONS</a> page where you'll attach this csv to value your bonds.</li>
                 <li style={{ marginTop: '1em', textAlign: 'justify' }}>If formatted correctly, summary data for your bonds should be available shortly after attaching your csv.</li>
