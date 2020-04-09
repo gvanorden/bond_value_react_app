@@ -80,19 +80,19 @@ class Valuations extends Component {
                         <div style={{ width: '50em', margin: 'auto' }}>
                             <Card style={{ width: '15em', float: 'left' }}>
                                 <Card.Body style={{ margin: 'auto' }} >
-                                    <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: '14px', fontWeight: 'bold', textAlign: 'center' }}>VALUE TOTAL</Card.Subtitle>
+                                    <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: '14px', fontWeight: 'bold', textAlign: 'center' }}>TOTAL VALUE</Card.Subtitle>
                                     <Card.Title style={{ color: 'green', fontSize: '28px', textAlign: 'center', marginBottom: '0' }}>{this.state.totals[0]}</Card.Title>
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '15em', float: 'left', marginLeft: '2.5em' }}>
                                 <Card.Body style={{ margin: 'auto' }}>
-                                    <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: '14px', fontWeight: 'bold', textAlign: 'center' }}>AMOUNT TOTAL</Card.Subtitle>
+                                    <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: '14px', fontWeight: 'bold', textAlign: 'center' }}>TOTAL FACE VALUE</Card.Subtitle>
                                     <Card.Title style={{ fontSize: '28px', textAlign: 'center', marginBottom: '0' }}>{this.state.totals[1]}</Card.Title>
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '15em', float: 'left', marginLeft: '2.5em' }}>
                                 <Card.Body style={{ margin: 'auto' }}>
-                                    <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: '14px', fontWeight: 'bold', textAlign: 'center' }}>ISSUE PRICE TOTAL</Card.Subtitle>
+                                    <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: '14px', fontWeight: 'bold', textAlign: 'center' }}>TOTAL ISSUE PRICE</Card.Subtitle>
                                     <Card.Title style={{ fontSize: '28px', textAlign: 'center', marginBottom: '0' }}>{this.state.totals[2]}</Card.Title>
                                 </Card.Body>
                             </Card>
@@ -112,7 +112,7 @@ class Valuations extends Component {
                                     <tr>
                                         <th>Lookup Date</th>
                                         <th>Serial Number</th>
-                                        <th>Bond Type</th>
+                                        <th>Series</th>
                                         <th>Bond Amount</th>
                                         <th>Issue Date</th>
                                         <th>Next Accrual</th>
