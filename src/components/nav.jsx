@@ -17,7 +17,7 @@ class Navigation extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Navbar bg="dark" variant="dark">
+                <Navbar bg="dark" variant="dark" sticky="top">
                     <Navbar.Brand> <img
                         src={logo}
                         width="30"
