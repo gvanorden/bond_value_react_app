@@ -29,6 +29,7 @@ class Navigation extends Component {
                     <Nav.Link href="/valuations" style={{ fontSize: '14px', fontWeight: '500' }}>VALUATIONS</Nav.Link>
                 </Navbar>
                 <Switch>
+                    <Route exact path='/' component={Instruction} />
                     <Route exact path='/instructions' component={Instruction} />
                     <Route exact path='/bond_example' component={BondExample} />
                     <Route exact path='/valuations' component={Valuation} />
