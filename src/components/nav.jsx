@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './index';
+//import Home from './index';
 import Instruction from './instructions';
 import Valuation from './valuations';
 import BondExample from './bond_example';
@@ -30,7 +30,7 @@ class Navigation extends Component {
                     <Nav.Link href="/valuations" style={{ fontSize: '14px', fontWeight: '500' }}>VALUATION</Nav.Link>
                 </Navbar>
                 <Switch>
-                    <Route exact path='/' component={Home} />
+                    <Route exact path='/' component={Instruction} />
                     <Route exact path='/instructions' component={Instruction} />
                     <Route exact path='/bond_example' component={BondExample} />
                     <Route exact path='/valuations' component={Valuation} />
