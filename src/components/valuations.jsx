@@ -41,7 +41,7 @@ class Valuations extends Component {
                     body: JSON.stringify({ csv })
                 };
 
-                fetch('http://localhost:5000/upload', requestOptions)
+                fetch('http://ec2-18-222-193-49.us-east-2.compute.amazonaws.com/upload', requestOptions)
                     .then(response => response.json())
                     .then(response => {
                         let exports = []
