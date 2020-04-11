@@ -41,7 +41,7 @@ class Valuations extends Component {
                     body: JSON.stringify({ csv })
                 };
 
-                fetch('http://ec2-18-219-250-71.us-east-2.compute.amazonaws.com/upload', requestOptions)
+                fetch('https://acme.thesavingsbondwizard.com/upload', requestOptions)
                     .then(response => response.json())
                     .then(response => {
                         let exports = []
